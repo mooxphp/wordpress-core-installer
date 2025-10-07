@@ -19,7 +19,7 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-namespace Tests\Roots\Composer\phpunit;
+namespace Tests\Moox\Composer\phpunit;
 
 use Composer\Composer;
 use Composer\Config;
