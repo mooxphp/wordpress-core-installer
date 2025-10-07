@@ -31,7 +31,7 @@ use Composer\Plugin\PluginInterface;
 use Composer\Test\Mock\HttpDownloaderMock;
 use Composer\Util\HttpDownloader;
 use Composer\Util\Loop;
-use Roots\Composer\WordPressCorePlugin;
+use Moox\Composer\WordPressCorePlugin;
 use PHPUnit\Framework\TestCase;
 
 class WordPressCorePluginTest extends TestCase
@@ -63,7 +63,7 @@ class WordPressCorePluginTest extends TestCase
 
         $installer = $installationManager->getInstaller('wordpress-core');
 
-        $this->assertInstanceOf('\Roots\Composer\WordPressCoreInstaller', $installer);
+        $this->assertInstanceOf('\Moox\Composer\WordPressCoreInstaller', $installer);
     }
 
     /**
