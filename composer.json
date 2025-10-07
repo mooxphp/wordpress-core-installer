@@ -1,5 +1,5 @@
 {
-	"name": "roots/wordpress-core-installer",
+	"name": "moox/wordpress-core-installer",
 	"description": "A Composer custom installer to handle installing WordPress as a dependency",
 	"keywords": [
 		"wordpress"
@@ -16,20 +16,24 @@
 		{
 			"name": "Roots",
 			"email": "team@roots.io"
+		},
+		{
+			"name": "Moox",
+			"email": "devs@moox.org"
 		}
 	],
 	"autoload": {
 		"psr-4": {
-			"Roots\\Composer\\": "src/"
+			"Moox\\Composer\\": "src/"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Tests\\Roots\\Composer\\": "tests/"
+			"Tests\\Moox\\Composer\\": "tests/"
 		}
 	},
 	"extra": {
-		"class": "Roots\\Composer\\WordPressCorePlugin"
+		"class": "Moox\\Composer\\WordPressCorePlugin"
 	},
 	"require": {
 		"composer-plugin-api": "^1.0 || ^2.0",
@@ -43,7 +47,8 @@
 		"composer/installers": "<1.0.6"
 	},
 	"replace": {
-		"johnpbloch/wordpress-core-installer": "*"
+		"johnpbloch/wordpress-core-installer": "*",
+		"roots/wordpress-core-installer": "*"
 	},
 	"scripts": {
 		"test:phpunit": "phpunit",
