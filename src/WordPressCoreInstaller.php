@@ -19,7 +19,7 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-namespace Roots\Composer;
+namespace Moox\Composer;
 
 use Composer\Config;
 use Composer\Installer\LibraryInstaller;
