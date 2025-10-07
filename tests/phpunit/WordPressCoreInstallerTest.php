@@ -48,7 +48,7 @@ class WordPressCoreInstallerTest extends TestCase
         $installer = new WordPressCoreInstaller(new NullIO(), $composer);
         $package   = new Package('johnpbloch/test-package', '1.0.0.0', '1.0.0');
 
-        $this->assertEquals('wordpress', $installer->getInstallPath($package));
+        $this->assertEquals('public/wp', $installer->getInstallPath($package));
     }
 
     public function testSingleRootInstallDir()
