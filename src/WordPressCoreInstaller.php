@@ -44,8 +44,15 @@ class WordPressCoreInstaller extends LibraryInstaller
             }
         }
 
-        // 2️⃣ Read from dependent packages (like moox/press)
-        if (!$installationDir) {
+        // 2️⃣ Read from dependent packages (like moox/press) - SAFE version
+        if (
+            !$installationDir &&
+            $this->composer &&
+            method_exists($this->composer, 'getRepositoryManager') &&
+            $this->composer->getRepositoryManager() &&
+            method_exists($this->composer->getRepositoryManager(), 'getLocalRepository') &&
+            $this->composer->getRepositoryManager()->getLocalRepository()
+        ) {
             foreach ($this->composer->getRepositoryManager()->getLocalRepository()->getPackages() as $pkg) {
                 $pkgExtra = $pkg->getExtra();
                 if (!empty($pkgExtra['wordpress-install-dir'])) {
