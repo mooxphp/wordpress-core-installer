@@ -26,7 +26,7 @@ use Composer\Config;
 use Composer\IO\NullIO;
 use Composer\Package\Package;
 use Composer\Package\RootPackage;
-use Roots\Composer\WordPressCoreInstaller;
+use Moox\Composer\WordPressCoreInstaller;
 use PHPUnit\Framework\TestCase;
 
 class WordPressCoreInstallerTest extends TestCase
@@ -191,7 +191,7 @@ class WordPressCoreInstallerTest extends TestCase
      */
     public static function resetInstallPaths()
     {
-        $prop = new \ReflectionProperty('\Roots\Composer\WordPressCoreInstaller', '_installedPaths');
+        $prop = new \ReflectionProperty('\Moox\Composer\WordPressCoreInstaller', '_installedPaths');
         $prop->setAccessible(true);
         $prop->setValue(array());
     }
