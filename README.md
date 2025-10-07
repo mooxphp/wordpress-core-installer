@@ -1,11 +1,11 @@
 # WordPress Core Installer
 
-[![Tests](https://github.com/roots/wordpress-core-installer/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/roots/wordpress-core-installer/actions/workflows/tests.yml)
+[![Tests](https://github.com/mooxphp/wordpress-core-installer/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/mooxphp/wordpress-core-installer/actions/workflows/tests.yml)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
-[![Packagist](https://img.shields.io/packagist/dt/roots/wordpress-core-installer.svg)](https://packagist.org/packages/roots/wordpress-core-installer)
-![GitHub tag](https://img.shields.io/github/tag/roots/wordpress-core-installer.svg)
+[![Packagist](https://img.shields.io/packagist/dt/moox/wordpress-core-installer.svg)](https://packagist.org/packages/roots/wordpress-core-installer)
+![GitHub tag](https://img.shields.io/github/tag/mooxphp/wordpress-core-installer.svg)
 
-*This is a fork of [johnpbloch/wordpress-core-installer](https://github.com/johnpbloch/wordpress-core-installer) with some fixes to enhance compatibility with [roots/wordpress](https://packagist.org/packages/roots/wordpress)*
+*This is a fork of [johnpbloch/wordpress-core-installer](https://github.com/roots/wordpress-core-installer) with some fixes to enhance compatibility with [moox/press](https://packagist.org/packages/moox/press)*
 
 A custom Composer plugin to install WordPress core outside of `vendor`.
 
@@ -19,7 +19,7 @@ To set up a custom WordPress build package to use this as a custom installer, ad
 ```json
 "type": "wordpress-core",
 "require": {
-	"roots/wordpress-core-installer": "^3.0"
+	"moox/wordpress-core-installer": "^3.0"
 }
 ```
 
@@ -27,9 +27,11 @@ By default, this package will install a `wordpress-core` type package in the `wo
 
 ```json
 "extra": {
-	"wordpress-install-dir": "custom/path"
+	"wordpress-install-dir": "public/wp"
 }
 ```
+
+This works not only in the project's composer.json but also in a package's composer.json, the reason for the fork, and we default to `public/wp`.
 
 The root composer package can also declare custom paths as an object keyed by package name:
 
