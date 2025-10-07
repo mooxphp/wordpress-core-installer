@@ -5,7 +5,7 @@
 [![Packagist](https://img.shields.io/packagist/dt/moox/wordpress-core-installer.svg)](https://packagist.org/packages/roots/wordpress-core-installer)
 ![GitHub tag](https://img.shields.io/github/tag/mooxphp/wordpress-core-installer.svg)
 
-*This is a fork of [johnpbloch/wordpress-core-installer](https://github.com/roots/wordpress-core-installer) with some fixes to enhance compatibility with [moox/press](https://packagist.org/packages/moox/press)*
+*This is a fork of [roots/wordpress-core-installer](https://github.com/roots/wordpress-core-installer) with some fixes to enhance compatibility with [moox/press](https://packagist.org/packages/moox/press)*
 
 A custom Composer plugin to install WordPress core outside of `vendor`.
 
